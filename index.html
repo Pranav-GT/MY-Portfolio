@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!--Header-section-->
+
+    <header class="header">
+        <a href="#" class="logo">Pranav</a>
+
+        <i class="ri-menu-line" id="menu_icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#exprience">Experience</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+    <!--Home_section-->
+    <section class="home" id="home">
+        <div class="home_content">
+            <h3>Hi,Myself</h3>
+            <h1>Pranav Nair</h1>
+            <h3>And I'm a <span class="multiple_text"></span></h3>
+            <p>Crafting websites by day, building games by night. I'm Pranav, and I turn creative ideas into real digital experiences.</p>
+            <div class="social_links">
+                <a href="https://github.com/Pranav-GT " target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home_image">
+            <img src="Images/pranav_nair_logo.png" alt="">
+        </div>
+    </section>
+
+    <!--About_section-->
+    <section class="about" id="about">
+        <dev class="about_content">
+            <h2 class="heading">ABOUT <span>ME</span></h2>
+            <h3 class="multiple_text" ></h3>
+            <p>I'm a passionate developer who loves crafting pixel-perfect UIs and bringing game worlds to life. When I'm not coding, I'm probably designing my next game level. Currently a college student, turning caffeine and late nights into cool projects.</p>
+        </dev>
+    </section>
+
+    <!--Experience_section-->
+    <section class="experience" id="exprience">
+        <h2 class="heading">Experience</h2>
+
+        <div class="experience_info">
+
+            <div class="grid">
+                <div class="grid_card">
+                    <i class="ri-code-s-slash-line" id="card_heading"></i>
+                    <span id="card_heading">Frontend Development</span>
+                    <h3>1 Year</h3>
+                    <p>Of building responsive, user-friendly websites and web applications with a focus on clean UI and smooth interactions.</p>
+                </div>
+                 <div class="grid_card">
+                    <i class="ri-gamepad-line" id="card_heading"></i>
+                    <span id="card_heading">Game Development</span>
+                    <h3>6 months</h3>
+                    <p>Of designing and developing games, focusing on fun mechanics and engaging player experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Project_section-->
+    <section class="project" id="project">
+        <h2 class="heading">Projects</h2>
+
+        <ul class="project_list">
+            <li class="project_card">
+                <img src="images/Gym-pre.png" alt="Gym" class="project_image">
+                <h3 class="name"><span>Gym Landing-Page</span></h3>
+                <p class="text">Gym landing page with animations & slider</p>
+                <div class="btn_group">
+                <a href="https://pranav-gt.github.io/GYM-landing-page/" target="_blank" class="btn">Live-Demo</a>
+                <a href="https://github.com/Pranav-GT/GYM-landing-page" target="_blank" class="btn">Git-Repo</a>
+                </div>
+             </li>
+
+            <li class="project_card">
+                <img src="images/Cafe-pre.jpg" alt="cafe" class="project_image">
+                <h3 class="name"><span>Cafe Landing-Page</span></h3>
+                <p class="text">Responsive coffee cafe landing page</p>
+                <div class="btn_group">
+                <a href="https://pranav-gt.github.io/Cafe-landing-page/" target="_blank" class="btn">Live-Demo</a>
+                <a href="https://github.com/Pranav-GT/Cafe-landing-page" target="_blank" class="btn">Git-Repo</a>
+                </div>
+                
+            </li>
+        </ul>
+
+    </section>
+
+    <!--Contact_section-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form id="contact_form" action="https://formspree.io/f/mwvaadvl" method="POST">
+            <div class="input_box">
+                <input type="text" name="from_name" placeholder="Full Name">
+                <input type="email" name="from_email" placeholder="Email Address">
+            </div>
+
+            <div class="input_box">
+                <input type="number" name="mobile_number" placeholder="Mobile Number">
+                <input type="text" name="email_subject" placeholder="Email Subject">
+            </div>
+
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn" >
+
+        </form>
+    </section>
+
+    <!--Footer_section-->
+    <footer  class="footer">
+        <div class="footer_text">
+            <p>Copyright &copy; 2026 by Pranav Nair | All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer_iconTop">
+            <a href="#home"><i class="ri-arrow-up-fill"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
