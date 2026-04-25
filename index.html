@@ -18,7 +18,7 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#exprience">Experience</a>
+            <a href="#experience">Experience</a>
             <a href="#project">Projects</a>
             <a href="#contact">contact</a>
         </nav>
@@ -53,26 +53,76 @@
     </section>
 
     <!--Experience_section-->
-    <section class="experience" id="exprience">
+    <section class="experience" id="experience">
         <h2 class="heading">Experience</h2>
+
+        <!-- Tab Buttons -->
+        <div class="tab_buttons">
+            <button class="tab_btn active" onclick="showTab('frontend', this)">Frontend Development</button>
+            <button class="tab_btn" onclick="showTab('gamedev', this)">Game Development</button>
+            <button class="tab_btn" onclick="showTab('tools', this)">Tools & Software</button>
+        </div>
 
         <div class="experience_info">
 
-            <div class="grid">
+            <!-- Frontend Tab -->
+            <div class="grid tab_content" id="tab_frontend">
                 <div class="grid_card">
-                    <i class="ri-code-s-slash-line" id="card_heading"></i>
-                    <span id="card_heading">Frontend Development</span>
-                    <h3>1 Year</h3>
-                    <p>Of building responsive, user-friendly websites and web applications with a focus on clean UI and smooth interactions.</p>
+                    <i class="ri-html5-line"></i>
+                    <span class="card_label">HTML5 & CSS3</span>
+                    <p>Building structured, styled, and responsive web pages with modern HTML and CSS techniques.</p>
                 </div>
-                 <div class="grid_card">
-                    <i class="ri-gamepad-line" id="card_heading"></i>
-                    <span id="card_heading">Game Development</span>
-                    <h3>6 months</h3>
-                    <p>Of designing and developing games, focusing on fun mechanics and engaging player experiences.</p>
+                <div class="grid_card">
+                    <i class="ri-javascript-line"></i>
+                    <span class="card_label">JavaScript</span>
+                    <p>Adding interactivity and dynamic behavior to web applications.</p>
+                </div>
+                <div class="grid_card">
+                    <i class="ri-layout-responsive-line"></i>
+                    <span class="card_label">Responsive Design</span>
+                    <p>Crafting layouts that work seamlessly across all screen sizes and devices.</p>
+                </div>
+                <div class="grid_card">
+                    <i class="ri-github-fill"></i>
+                    <span class="card_label">Git & GitHub</span>
+                    <p>Version control and collaborative development using Git and GitHub.</p>
                 </div>
             </div>
+
+            <!-- Game Dev Tab -->
+            <div class="grid tab_content tab_hidden" id="tab_gamedev">
+                <div class="grid_card">
+                    <i class="ri-gamepad-line"></i>
+                    <span class="card_label">Unity</span>
+                    <p>Developing 2D and 3D games using the Unity game engine.</p>
+                </div>
+                <div class="grid_card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <span class="card_label">C# Scripting</span>
+                    <p>Writing game logic, mechanics, and systems using C# in Unity.</p>
+                </div>
+
+
+            </div>
+
+            <!-- Tools Tab -->
+            <div class="grid tab_content tab_hidden" id="tab_tools">
+                <div class="grid_card">
+                    <i class="ri-code-box-line"></i>
+                    <span class="card_label">VS Code</span>
+                    <p>Primary code editor for web and app development with extensions and debugging tools.</p>
+                </div>
+                <div class="grid_card">
+                    <i class="ri-github-fill"></i>
+                    <span class="card_label">Git & GitHub</span>
+                    <p>Source control, project management, and open-source collaboration.</p>
+                </div>
+
+            </div>
+
         </div>
+
+
     </section>
 
     <!--Project_section-->

@@ -191,18 +191,53 @@ span{
     font-weight: 700;
     margin-bottom: 3rem;
 }
- 
-.exprience_info{
+
+/* Tab Buttons */
+.tab_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab_btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--text_color);
+    background: transparent;
+    border: 0.2rem solid var(--text_color);
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.tab_btn:hover {
+    border-color: var(--main_color);
+    color: var(--main_color);
+}
+
+.tab_btn.active {
+    background: var(--main_color);
+    border-color: var(--main_color);
+    color: var(--background_color);
+    box-shadow: 0 0 0.8rem var(--main_color);
+}
+
+/* Experience Grid */
+.experience_info {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
 }
 
 .grid{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2rem;
+    width: 100%;
 }
 
 .grid_card{
@@ -218,23 +253,34 @@ span{
 }
 
 .grid_card:hover{
-  background: var(--snd_background_color);
-  border: 0.2rem solid var(--snd_background_color);
-  box-shadow: 0 0 1rem var(--text_color);
+    background: var(--snd_background_color);
+    border: 0.2rem solid var(--snd_background_color);
+    box-shadow: 0 0 1rem var(--text_color);
 }
 
-#card_heading{
+.grid_card i {
     font-size: 3.2rem;
+    color: var(--main_color);
+    margin-bottom: 1rem;
+}
+
+.card_label {
+    font-size: 1.8rem;
     font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--text_color);
 }
 
-.experience p{
-    font-size: 1.6rem;
+.experience p {
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+    color: var(--text_color);
+    opacity: 0.85;
+}
+.tab_hidden {
+    display: none !important;
 }
 
-.experience h3{
-    font-size: 1.6rem
-}
 
 
 .project{
