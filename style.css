@@ -26,6 +26,22 @@ html{
 body{
     background: var(--background_color);
     color: var(--text_color);
+    /* Leather grain texture */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(212, 184, 154, 0.018) 3px,
+            rgba(212, 184, 154, 0.018) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 8px,
+            rgba(0, 0, 0, 0.06) 8px,
+            rgba(0, 0, 0, 0.06) 9px
+        );
 }
 
 section{
@@ -33,6 +49,7 @@ section{
     padding: 10rem 9% 2rem;
 }
 
+/* ── HEADER ── */
 .header{
     position: fixed;
     top: 0;
@@ -44,6 +61,11 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    /* Leather bottom edge */
+    border-bottom: 2px solid rgba(212, 184, 154, 0.35);
+    box-shadow:
+        inset 0 -1px 0 rgba(212, 184, 154, 0.12),
+        0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .logo{
@@ -51,6 +73,10 @@ section{
     color: var(--text_color);
     font-weight: 700;
     cursor: default;
+    /* Embossed stamp effect */
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        -1px -1px 1px rgba(212, 184, 154, 0.1);
 }
 
 .navbar a{
@@ -59,11 +85,11 @@ section{
     margin: 4rem;
     font-weight: 700;
     transition: 0.3s ease-in-out;
+    letter-spacing: 0.05rem;
 }
 
-.navbar a:hover
-{
-    color: var(--main_color)
+.navbar a:hover{
+    color: var(--main_color);
 }
 
 #menu_icon{
@@ -72,6 +98,7 @@ section{
     display: none;
 }
 
+/* ── HOME ── */
 .home{
     display: flex;
     justify-content: center;
@@ -81,6 +108,8 @@ section{
 .home_content h3{
     font-size: 3.2rem;
     font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
 }
 
 .home_content h3:nth-of-type(2){
@@ -95,12 +124,18 @@ span{
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+    /* Debossed stamp on the big name */
+    text-shadow:
+        3px 3px 6px rgba(0, 0, 0, 0.95),
+        -1px -1px 2px rgba(212, 184, 154, 0.08);
 }
 
 .home_image img{
     padding-left: 2rem;
     width: 25vw;
     animation: floatImage 4s ease-in-out infinite;
+    /* Leather frame around profile image */
+    border-radius: 50%;
 }
 
 @keyframes floatImage {
@@ -119,61 +154,97 @@ span{
     font-size: 1.6rem;
 }
 
+/* ── SOCIAL LINKS ── */
 .social_links a{
     display: inline-flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: 0.2rem solid var(--main_color);
+    /* Dashed circle = leather stitch look */
+    border: 0.2rem dashed var(--main_color);
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main_color);
     margin: 3rem 1.5rem;
     transition: 0.3s ease-in-out;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .social_links a:hover{
     background: var(--main_color);
     color: var(--snd_background_color);
-    box-shadow: 0 0 0.8rem var(--main_color);
+    box-shadow:
+        inset 0 1px 4px rgba(0, 0, 0, 0.3),
+        0 0 0.8rem var(--main_color);
 }
 
+/* ── BUTTON ── */
 .btn{
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main_color);
-    border-radius: 4rem;
-    box-shadow: 0 0 0.8rem var(--main_color);
+    /* Squared corners = leather stamp */
+    border-radius: 0.4rem;
     font-size: 1.6rem;
     color: var(--background_color);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
     font-weight: 600;
     transition: 0.3s ease-in-out;
+    /* Embossed button depth */
+    box-shadow:
+        inset 0 1px 0 rgba(255, 240, 210, 0.25),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+        0 4px 10px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover{
-    box-shadow: none;
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.4);
+    transform: translateY(1px);
 }
 
+/* ── ABOUT ── */
 .about{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     background: var(--snd_background_color);
+    /* Diagonal grain on alternating sections */
+    background-image: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 20px,
+        rgba(212, 184, 154, 0.012) 20px,
+        rgba(212, 184, 154, 0.012) 21px
+    );
+    /* Leather panel top/bottom seams */
+    border-top: 1px solid rgba(212, 184, 154, 0.15);
+    border-bottom: 1px solid rgba(212, 184, 154, 0.15);
 }
 
 .heading{
     text-align: center;
     font-size: 4.5rem;
+    /* Embossed section heading */
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.9),
+        -1px -1px 1px rgba(212, 184, 154, 0.08);
+    letter-spacing: 0.1rem;
 }
 
 .about_content h2{
     text-align: left;
     line-height: 1.2;
     margin-bottom: 5rem;
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.9),
+        -1px -1px 1px rgba(212, 184, 154, 0.08);
 }
 
 .about_content h3{
@@ -185,6 +256,7 @@ span{
     margin: 2rem 0 3rem;
 }
 
+/* ── EXPERIENCE ── */
 .experience .heading{
     text-align: center;
     font-size: 4rem;
@@ -208,10 +280,13 @@ span{
     font-family: "Poppins", sans-serif;
     color: var(--text_color);
     background: transparent;
-    border: 0.2rem solid var(--text_color);
-    border-radius: 4rem;
+    /* Dashed = stitched leather tab */
+    border: 0.2rem dashed var(--text_color);
+    border-radius: 0.4rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
 }
 
 .tab_btn:hover {
@@ -222,8 +297,12 @@ span{
 .tab_btn.active {
     background: var(--main_color);
     border-color: var(--main_color);
+    border-style: solid;
     color: var(--background_color);
-    box-shadow: 0 0 0.8rem var(--main_color);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 240, 210, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+        0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Experience Grid */
@@ -235,14 +314,15 @@ span{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
 }
 
 .grid_card{
-    border: 0.2rem solid var(--text_color);
-    border-radius: 3rem;
+    /* Dashed border = leather stitching */
+    border: 0.2rem dashed var(--main_color);
+    border-radius: 1rem;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -250,12 +330,52 @@ span{
     justify-content: left;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    /* Pressed leather depth */
+    box-shadow:
+        inset 0 2px 6px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 4px,
+        rgba(212, 184, 154, 0.015) 4px,
+        rgba(212, 184, 154, 0.015) 5px
+    );
+}
+
+/* Inner inset frame — double-stitch feel */
+.grid_card::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px dashed rgba(212, 184, 154, 0.15);
+    border-radius: 0.6rem;
+    pointer-events: none;
+}
+
+/* Top sheen line */
+.grid_card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 184, 154, 0.25), transparent);
 }
 
 .grid_card:hover{
-    background: var(--snd_background_color);
-    border: 0.2rem solid var(--snd_background_color);
-    box-shadow: 0 0 1rem var(--text_color);
+    background-color: var(--snd_background_color);
+    border-color: var(--main_color);
+    border-style: solid;
+    box-shadow:
+        inset 0 1px 0 rgba(212, 184, 154, 0.1),
+        0 0 1.5rem rgba(212, 184, 154, 0.2);
 }
 
 .grid_card i {
@@ -269,6 +389,7 @@ span{
     font-weight: 700;
     margin-bottom: 0.8rem;
     color: var(--text_color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .experience p {
@@ -277,15 +398,24 @@ span{
     color: var(--text_color);
     opacity: 0.85;
 }
+
 .tab_hidden {
     display: none !important;
 }
 
-
-
+/* ── PROJECTS ── */
 .project{
     background: var(--snd_background_color);
+    background-image: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 20px,
+        rgba(212, 184, 154, 0.012) 20px,
+        rgba(212, 184, 154, 0.012) 21px
+    );
     padding: 50px 0 100px;
+    border-top: 1px solid rgba(212, 184, 154, 0.15);
+    border-bottom: 1px solid rgba(212, 184, 154, 0.15);
 }
 
 .project .project_list {
@@ -304,31 +434,74 @@ span{
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid var(--text_color);
-    border-radius: 3rem;
+    /* Stitched project card */
+    border: 2px dashed var(--main_color);
+    border-radius: 1rem;
     width: calc(100% / 2.5 - 120px);
     transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        inset 0 2px 6px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 4px,
+        rgba(212, 184, 154, 0.015) 4px,
+        rgba(212, 184, 154, 0.015) 5px
+    );
+}
+
+/* Inner stitch frame */
+.project .project_list .project_card::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px dashed rgba(212, 184, 154, 0.12);
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+.project .project_list .project_card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 184, 154, 0.25), transparent);
 }
 
 .project .project_list .project_card:hover{
-    color: var(----text_color);
-    border-color: var(--snd_background_color);
-    background: var(--background_color);
-    box-shadow: 0 0 1rem var(--text_color);
+    border-style: solid;
+    border-color: var(--main_color);
+    background-color: var(--background_color);
+    box-shadow:
+        inset 0 1px 0 rgba(212, 184, 154, 0.1),
+        0 0 1.5rem rgba(212, 184, 154, 0.2);
 }
 
 .project .project_list .project_card .project_image{
     max-width: 100%;
     border-radius: 50%;
     aspect-ratio: 1;
-    margin-bottom:15px;
-    box-shadow: 0 0 1.02rem black;
+    margin-bottom: 15px;
+    /* Leather-framed circular image */
+    box-shadow:
+        0 0 0 3px rgba(212, 184, 154, 0.35),
+        0 0 0 6px rgba(212, 184, 154, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.7);
     object-fit: contain;
 }
 
 .project .project_list .project_card .name{
     margin: 12px 0;
-    font-size: 3rem ;
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .project .project_list .project_card .text{
@@ -342,16 +515,27 @@ span{
 
 .project .btn{
     margin-top: 2rem;
-    box-shadow: none;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 240, 210, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+        0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .project .btn:hover{
-    transform: scale(1.08);
+    transform: translateY(-5px);
     background: transparent;
     color: var(--text_color);
     cursor: pointer;
+    box-shadow: none;
+    border: 0.15rem dashed var(--main_color);
+}
+.home_btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+/* ── CONTACT ── */
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -361,6 +545,18 @@ span{
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
+    /* Stitched form container */
+    border: 0.15rem dashed rgba(212, 184, 154, 0.25);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(212, 184, 154, 0.012) 3px,
+        rgba(212, 184, 154, 0.012) 4px
+    );
 }
 
 .contact form .input_box{
@@ -376,8 +572,18 @@ span{
     font-size: 1.6rem;
     color: var(--text_color);
     background: var(--snd_background_color);
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
     margin: 0.7rem 0;
+    /* Inset pressed field */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(212, 184, 154, 0.15) !important;
+    transition: border-color 0.3s ease;
+}
+
+.contact form .input_box input:focus,
+.contact form textarea:focus{
+    border-color: rgba(212, 184, 154, 0.45) !important;
+    outline: none;
 }
 
 .contact form .input_box input{
@@ -393,6 +599,7 @@ span{
     cursor: pointer;
 }
 
+/* ── FOOTER ── */
 .footer{
     display: flex;
     justify-content: space-between;
@@ -400,6 +607,8 @@ span{
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--snd_background_color);
+    border-top: 2px solid rgba(212, 184, 154, 0.3);
+    box-shadow: inset 0 1px 0 rgba(212, 184, 154, 0.1);
 }
 
 .footer_text {
@@ -407,18 +616,26 @@ span{
 }
 
 .footer_iconTop a{
-    display: inline;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: .8rem 1rem;
     padding-top: 1.5rem;
     background: var(--main_color);
-    border-radius: 3rem;
+    /* Squared scroll-to-top button */
+    border-radius: 0.4rem;
     transition: 0.3s ease-in-out;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 240, 210, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+        0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .footer_iconTop a:hover{
-    box-shadow: 0 0 1rem var(--main_color);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.4);
+    transform: translateY(1px);
 }
 
 .footer_iconTop a i{
@@ -426,6 +643,7 @@ span{
     color: var(--snd_background_color);
 }
 
+/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -435,11 +653,12 @@ span{
 }
 
 ::-webkit-scrollbar-thumb{
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     background: var(--main_color);
+    box-shadow: inset 0 1px 0 rgba(255, 240, 210, 0.2);
 }
- 
-/*Resizing*/ 
+
+/* ── RESPONSIVE ── */
 
 @media (max-width:1200px){
     html{
@@ -460,7 +679,6 @@ span{
     .project .project_list .project_card{
         width: calc(100% / 2.5 - 60px);
     }
-
 }
 
 @media (max-width:991px){
@@ -505,33 +723,35 @@ span{
         width: 100%;
         padding: 1rem 3%;
         background: var(--snd_background_color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: .1rem solid rgba(212, 184, 154, 0.15);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
         display: none;
     }
 
     .navbar.active {
-    display: block;
+        display: block;
     }
 
     .navbar.active a {
-    display: block;
-    padding: 1rem 0;
-    font-size: 2rem;
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
-    } 
+        display: block;
+        padding: 1rem 0;
+        font-size: 2rem;
+        border-bottom: 0.1rem dashed rgba(212, 184, 154, 0.2);
+    }
 
-   .navbar.active a:last-child {
-    border-bottom: none;
+    .navbar.active a:last-child {
+        border-bottom: none;
     }
 
     .header.sticky {
-    background: var(--snd_background_color);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        background: var(--snd_background_color);
+        box-shadow:
+            0 0 1rem rgba(0, 0, 0, 0.4),
+            inset 0 -1px 0 rgba(212, 184, 154, 0.12);
     }
 
     .navbar a.active {
-    color: var(--main_color);
+        color: var(--main_color);
     }
 
     .home{
@@ -560,7 +780,7 @@ span{
     }
 
     .grid{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .project .project_list{
@@ -570,6 +790,10 @@ span{
     .project .project_list .project_card{
         width: 100%;
     }
+
+    .contact form{
+        padding: 2rem 1.5rem;
+    }
 }
 
 @media (max-width:617px){
@@ -577,12 +801,13 @@ span{
         width: 80vw;
         margin-top: 8rem;
     }
+
     .contact form .input_box input {
-    width: 49%;   
+        width: 49%;
     }
 
     .contact{
-    padding: 10rem 4% 2rem; 
+        padding: 10rem 4% 2rem;
     }
 }
 
