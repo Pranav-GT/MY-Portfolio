@@ -132,6 +132,12 @@
     <section class="project" id="project">
         <h2 class="heading">Projects</h2>
 
+
+        <button class="tab_btn active" onclick="showTab('frontend-P', this)">Frontend Projects</button>
+        <button class="tab_btn" onclick="showTab('gamedev-P', this)">Game-Dev Projects</button>
+
+
+    <div class="tab_content" id="tab_frontend-P">
         <ul class="project_list">
             <li class="project_card">
                 <img src="Images/Gym-pre.png" alt="Gym" class="project_image">
@@ -164,6 +170,21 @@
                 </div>
              </li>            
         </ul>
+        </div>
+
+        <div class="tab_content tab_hidden" id="tab_gamedev-P">
+            <ul class="project_list">
+                <li class="project_card">
+                <img src="Images/TTT.png" alt="Gym" class="project_image">
+                <h3 class="name"><span>Tic Tac Toe - Game</span></h3>
+                <p class="text">2-player Tic-Tac-Toe with a Best-of-3 series format</p>
+                <div class="btn_group">
+                <a href="https://github.com/Pranav-GT/Tic-Tac-Toe/releases/tag/v.01" target="_blank" class="btn">Test</a>
+                <a href="https://github.com/Pranav-GT/Tic-Tac-Toe" target="_blank" class="btn">Git-Repo</a>
+                </div>
+             </li>
+            </ul>
+        </div>
 
     </section>
 

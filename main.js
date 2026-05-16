@@ -57,10 +57,7 @@ ScrollReveal().reveal('.home_content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home_image, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home_content h1', { origin: 'left' });
 ScrollReveal().reveal('.home_content p, .about_content', { origin: 'right' });
-ScrollReveal().reveal('.project_card', {
-    origin: 'bottom',
-    interval: 500,
-});
+
 
 
 /*--------- typed js ----------*/
