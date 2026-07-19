@@ -133,6 +133,7 @@ span{
 .home_image img{
     padding-left: 2rem;
     width: 25vw;
+    max-width: 380px;
     animation: floatImage 4s ease-in-out infinite;
     /* Leather frame around profile image */
     border-radius: 50%;
@@ -528,13 +529,10 @@ span{
         0 1px 3px rgba(0, 0, 0, 0.4);
     transform: translateY(1px);
 }
-.project_card{
-    padding: 20rem 30rem;
-}
-
 .home_btns {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -668,7 +666,7 @@ span{
         font-size: 55%;
     }
 
-    .exprience_info{
+    .experience_info{
         flex-direction: column;
     }
 }
@@ -806,11 +804,19 @@ span{
     }
 
     .contact form .input_box input {
-        width: 49%;
+        width: 100%;
     }
 
     .contact{
         padding: 10rem 4% 2rem;
+    }
+
+    .home_btns{
+        justify-content: center;
+    }
+
+    .social_links a{
+        margin: 1.5rem 1rem;
     }
 }
 
@@ -820,6 +826,32 @@ span{
     }
 
     .contact form .input_box input{
-        width: 49%;
+        width: 100%;
+    }
+
+    .home_content h1{
+        font-size: 4.2rem;
+    }
+
+    .home_btns{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .home_btns .btn{
+        text-align: center;
+    }
+
+    .tab_buttons{
+        gap: 1rem;
+    }
+
+    .tab_btn{
+        padding: 0.8rem 1.6rem;
+        font-size: 1.3rem;
+    }
+
+    .project .project_list .project_card{
+        padding: 1.5rem;
     }
 }
